@@ -1,0 +1,51 @@
+Monday Oct 2 17
+
+HOUSEKEEPING
+
+TAs are former students
+instructors-sf@ for administrative/management needs
+  Jeff manages instructors (jeff@)
+Curriculum has been taught 30 times
+Company focused on job acquisition
+Bi-weekly Diversity and Inclusion roundtable (Thu)
+  Administered via Eventbrite invitation
+Prioritize understanding over completion
+Think of App Academy as a professional working environment
+Check-ins: <=9AM; 1PM<=1:15PM; 3:45PM<=4:00PM;
+Organized into Circle < Pod
+  Circle leader is your TA mentor
+  Pod leader manages TA mentors (Hope, David or Aaron)
+TA Duties
+  Guide, mentor, coach and supervisor
+  Monitor progress and read reports
+  Will not always know the answer to every question
+  Teach you how to read error messages and use Google/StOverF
+Daily Schedule
+  Lecture or study hall
+  Lots of pair programming
+  Do not refer to the solutions and do not fork the repos
+Evening Schedule
+  Review solutions; understand every single line
+  Watch video lectures—use a browser extension to speed up videos
+  Do readings and do homework
+    Submit email each night to instructors-sf@
+    "HWRK W?D? {FirstName LastName}"
+  Fill out progress tracker report, always due at 9AM the next day
+  Do daily quiz labelled for next day
+Assessments
+  Most Mondays, 1-2 hours in length
+  Use a school machine unless you are 100% confident in your system Ruby
+  Cheating will result in immediate expulsion
+  1 passed spec == 1 point
+  If you fail the first assessment, you will take a retake that day
+  Failing the assessment and failing the retake => dismissal
+Strikes
+  Lateness
+  10 Available
+  Personal devices out on the table
+  3 sick days; notify us before class starts
+Pairing
+  Roles: driver, navigator
+  Switch every 15 minutes
+  Control scheme depends on knowledge of driver/navigator
+  
