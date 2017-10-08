@@ -89,7 +89,7 @@ class Map
   end
 
 end
-# 
+#
 # my_map = Map.new
 # my_map.assign(1, 2)
 # p my_map.show
