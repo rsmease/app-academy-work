@@ -46,3 +46,25 @@
       #Return children, then parents
 #To explain trees, we are going to design a Tic Tac Toe AI
   #It's fairly obvious to imagine an AI moving over a tree looking for options
+
+#How the Hash Works in Ruby
+  #Hashes are a data structure organized by key-value pairs, where all keys are unique
+  #Hashes are also known as dictionaries and associative arrays
+  #Hashes use division of a numerical representation of each object (modulo operation) to store the access ID for each key more efficiently
+    #If the keys were kept as their genuine input, we would occasionally have very long strings or numbers or other objects as keys, which would be harder to search and access
+  #Although progressively less likely for larger hash sets, 'hash collision' is always a possibility, where multiple keys return the same number as a result of the modulo operation
+    #Seeding a hash with random values produced by the hashing function also greatly decreases the possibility of a hash collision
+    #Ruby stores hashes of less than six in the same bucket by default, only using the modulo hashing strategy for larger hash sizes
+    #Hashes are ordered in Ruby, which has some space consequence, but no time consequences
+
+#Dynamic Arrays
+  #Dynamic arrays are arrays that will store n*2 (or some other constant n*k) available space, half of which is unoccupied
+  #The unused space allows for insertion at O(1) time, rather than O(n) (because to add memory to an array, we have to reassign the array to a new physical space in memory)
+    #The array must will use O(n) operations when the array is expanded due to the arrive of n*k new inputs, but the total cost is amortized to O(1)
+
+#XOR
+  #XOR (^) is the strict or exclusive version of OR (||) that will return false for true ^ true (which return true with ||)
+  #Bit comparisons using ^ are useful for hashing numbers
+    #It promotes high determinism, comprehensiveness and uniformity
+    #It is also very predictable, so it needs the aid of other function features to make the spread of hashes less easy to guess
+  #Other bit operators do not produce the same uniformity 
