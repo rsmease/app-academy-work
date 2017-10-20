@@ -96,4 +96,7 @@
     #MySQL: known for being open-source, popular, easy to use
     #Oracle: known for reliability at enterprise scale
     #MongoDB: known for being document-oriented, open-source, high performance, ease of use, flexibility, ease of maintenance
-    #Redis: Known for performance, advanced k-v cache storage, easy deployment, open-source 
+    #Redis: Known for performance, advanced k-v cache storage, easy deployment, open-source
+
+#CSS Display Types
+  #
