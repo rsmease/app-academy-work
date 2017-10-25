@@ -1,0 +1,7 @@
+<% @cats.each do |cat| %>
+  <h2> <%= cat.name %>  </h2>
+  <li> <%= cat.age %> </li>
+  <%= link_to "Rent #{cat.name}", cat_url(cat) %>
+<% end %>
+<br>
+<%= link_to "New cat", new_cat_url %>

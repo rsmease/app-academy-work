@@ -1,0 +1,26 @@
+<table>
+  <tbody>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Birthday</th>
+      <th>Coat Color</th>
+      <th>Sex</th>
+      <th>Favorite Quote</th>
+    </tr>
+    <tr>
+      <td><%= @cat.name %></td>
+      <td><%= @cat.age %></td>
+      <td><%= @cat.birth_date %></td>
+      <td><%= @cat.color %></td>
+      <td><%= @cat.sex %></td>
+      <td><%= @cat.description %></td>
+    </tr>
+  </tbody>
+
+  <%= link_to "Edit cat", edit_cat_url(@cat) %>
+
+</table>
+
+<%= render "cat_rental_requests/request_table", cat: @cat %>
+<%= link_to "New request", cats_url %>
