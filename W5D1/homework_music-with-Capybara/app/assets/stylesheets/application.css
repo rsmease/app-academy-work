@@ -1,0 +1,140 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body {
+   background-color: #000000;
+ }
+
+ header, body, footer {
+
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+
+   font-family: "Aclonica";
+   color: #F0C9D2;
+ }
+
+ a {
+   color: #FFFFFF;
+   text-decoration: none;
+   margin: 10px;
+ }
+
+ .authentication-links {
+   display: flex;
+   flex-direction: row;
+ }
+
+ h1 {
+   margin-bottom: 5px;
+ }
+
+ h2 {
+   color: red;
+
+ }
+
+ h2 {
+  animation: shake 0.84s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+ h3 {
+   margin-top: 5px;
+ }
+
+ img {
+   height: 100px;
+   border-radius: 200px;
+   border: 3px solid #116CA4;
+ }
+
+ .login {
+   margin-top: 15px;
+   display: flex;
+   flex-direction: column;
+ }
+
+ .login label {
+   margin-top: 15px;
+   margin-bottom: 5px;
+   text-align: center;
+ }
+
+ .login input {
+   border-radius: 5px;
+ }
+
+ .enter-input {
+   box-shadow: 3px 3px 5px #116CA4;
+ }
+
+ .submit-input {
+   background-color: #F0C9D2;
+   font-family: "Aclonica";
+   font-weight: bold;
+   margin-top: 30px;
+ }
+
+ .creator-links {
+   display: flex;
+   flex-direction: row;
+ }
+
+ .creator-links a {
+   color: #FFFFFF;
+   text-decoration: none;
+   margin: 10px;
+   padding: 9px 9px;
+   background-color: #116CA4;
+   border-radius: 5px;
+ }
+
+ footer {
+   margin-top: 500px;
+   font-size: 8px;
+ }
+
+ footer p {
+   margin-bottom: 0px;
+ }
+
+ footer a {
+   color: #FFFFFF;
+   text-decoration: none;
+   margin-top: 0px;
+ }

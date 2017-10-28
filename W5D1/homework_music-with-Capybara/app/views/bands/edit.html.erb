@@ -1,0 +1,15 @@
+<% unless flash.now[:errors].nil? %>
+  <% flash.now[:errors].each do |error| %>
+      <h2><%= error %></h2>
+  <% end %>
+  <img src="https://media.giphy.com/media/SISMwEp1wht84/giphy.gif" alt="">
+<% end %>
+
+<form class="login" action="<%= band_url(@band) %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <!-- <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"> -->
+  <%= token_tag nil %>
+  <label for="name">Name</label>
+  <input class="enter-input" type="text" name="band[name]" value="<%= @band.name %>">
+  <input class="submit-input" type="submit" value="Update Band">
+</form>
