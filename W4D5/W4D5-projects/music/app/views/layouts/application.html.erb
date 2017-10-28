@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Méwsic</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+  </head>
+
+  <body>
+    <header>
+      <section class="authentication-links">
+        <% if logged_in? %>
+          <%= link_to "My Profile", user_url(current_user) %>
+          <br>
+          <%= link_to "Log Out", session_url, method: :delete %>
+        <% else %>
+          <%= link_to "Log In", new_session_url %>
+          <%= link_to "Sign Up", new_user_url %>
+        <% end %>
+      </section>
+      <h1>Méwsic</h1>
+      <h3>Music Sharing for Pokémon</h3>
+      <img src="https://media.giphy.com/media/vMV8KKoHREdtm/giphy.gif" alt="Mew">
+    </header>
+    <%= yield %>
+    <footer>
+      <p>Méwsic powered by Mewto Technologies using Mew.ai® proprietary general intelligence platform. All Rights Reserved.</p>
+      <br>
+      <a href="#">Terms and Conditions</a>
+    </footer>
+  </body>
+</html>

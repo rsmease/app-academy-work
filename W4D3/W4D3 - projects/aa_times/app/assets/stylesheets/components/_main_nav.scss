@@ -1,0 +1,60 @@
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.left-nav > ul,
+.right-nav > ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.left-nav > ul > li {
+  margin-left: 20px;
+  background-color: $white;
+  border-color: $white;
+  color: inhert;
+  font-weight: bold;
+  padding: 7px 9px;
+  transition: background-color 0.3s;
+  font-family: $sans-serif;
+  text-transform: uppercase;
+  font-size: 11px;
+  text-align: center;
+  cursor: pointer
+}
+
+.right-nav > ul > li {
+  margin-left: 5px;
+}
+
+.right-nav > ul > li:last-of-type {
+  padding: 7px 9px;
+  cursor: pointer;
+}
+
+.left-nav > ul > li:hover,
+.right-nav > ul > li:last-of-type:hover {
+  background-color: $light-gray;
+  border-color: $lightest-gray;
+  border-radius: 3px;
+}
+
+.left-nav span {
+  margin-left: 10px;
+}
+
+
+.right-nav i {
+  font-size: 24px;
+}
+
+.left-nav li:first-child i {
+  font-size: 15px;
+}
+
+#gear-dropdown-btn {
+  position: relative;
+}

@@ -1,0 +1,9 @@
+<p>_______________________________________________________________</p>
+<h1>Band Information</h1>
+<h3><%= @band.name %></h3>
+<br>
+<img src="<%= @band.band_image_link %>" alt="Band Photo">
+<br>
+<section class="creator-links">
+  <%= link_to "Edit Band", edit_band_url %>
+</section>

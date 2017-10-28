@@ -1,0 +1,16 @@
+.topics {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  border-bottom: 1px solid $light-gray;
+}
+
+.topics ul {
+  display: flex;
+  margin: 15px;
+}
+
+.topics a {
+    margin: 0 10px;
+}
