@@ -1,0 +1,38 @@
+<% unless flash.now[:errors].nil? %>
+  <% flash.now[:errors].each do |error| %>
+    <h1 class="error-text"><%= error %></h1>
+  <% end %>
+<% end %>
+
+<h1>Edit Post</h1>
+
+<form class="sign-in-form" action="<%= subreddit_post_url(@post) %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <label for="title">Title</label>
+  <input id="title" type="text" name="post[title]" value="<%= @post.title %>">
+  <br>
+  <label for="url">URL (Optional)</label>
+  <input id="url" type="text" name="post[url]" value="<%= @post.url %>">
+
+  <label for="content">Content (Optional) </label>
+  <input id="content" type="text" name="post[content]" value="<%= @post.content %>">
+
+  <label>Choose Subsploots</label>
+
+  <input type="hidden" name="post[subreddit_ids][]" value="">
+
+  <% Subreddit.all.each do |subreddit| %>
+    <label><%= subreddit.title %>
+      <input
+        type="checkbox"
+        value="<%= subreddit.id %>"
+        name="post[subreddit_ids][]"
+        <%#= "checked" if @post.subreddit_ids.include?(subreddit.id) %>
+      />
+    </label>
+  <% end %>
+
+  <input class="submit-button" type="submit" value="Edit Post">
+</form>

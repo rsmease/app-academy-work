@@ -1,0 +1,12 @@
+<br>
+<img src="<%= random_corgi_url %>" alt="Corgi">
+<br>
+<%= link_to "Create Subsploot", new_subreddit_url, method: :get %>
+
+<h1>Top Subsploots</h1>
+
+<% @subreddits.each do |subreddit| %>
+  <h3><%= subreddit.title %></h3>
+  <%= link_to "View Subsploot", subreddit_url(subreddit), method: :get %>
+  <%= button_to "Delete Subsploot", subreddit_url(subreddit), method: :delete%>
+<% end %>

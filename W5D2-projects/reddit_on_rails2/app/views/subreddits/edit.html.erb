@@ -1,0 +1,20 @@
+<% unless flash.now[:errors].nil? %>
+  <% flash.now[:errors].each do |error| %>
+    <h1 class="error-text"><%= error %></h1>
+  <% end %>
+<% end %>
+
+<h1>Subsploot Admin Panel</h1>
+
+<form class="sign-in-form" action="<%= subreddit_url(@subreddit) %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <label for="title">Title</label>
+  <input id="title" type="text" name="subreddit[title]" value="<%= @subreddit.title %>">
+  <br>
+  <label for="description">Description</label>
+  <input id="description" type="text" name="subreddit[description]" value="<%= @subreddit.description %>">
+
+  <input class="submit-button" type="submit" value="Update Subsploot">
+</form>

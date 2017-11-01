@@ -1,0 +1,58 @@
+<h1><%= @subreddit.title %></h1>
+<p><%= @subreddit.description %></p>
+
+<% unless flash.now[:errors].nil? %>
+  <% flash.now[:errors].each do |error| %>
+    <h1 class="error-text"><%= error %></h1>
+  <% end %>
+<% end %>
+
+<% @subreddit.posts.each do |post| %>
+  <h4><%= post.title %></h4>
+  <h4><%= post.url %></h4>
+  <h4><%= post.content %></h4>
+  <% if post.author_id = current_user.id %>
+    <%= link_to "Edit Post", edit_subreddit_post_url(@subreddit, post), method: :get %>
+    <%= link_to "Delete Post", subreddit_post_url(@subreddit, post), method: :delete %>
+  <% end %>
+<% end %>
+
+<h1>Make A Post</h1>
+
+<form class="sign-in-form" action="<%= subreddit_posts_url(@subreddit) %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <label for="title">Title</label>
+  <input id="title" type="text" name="post[title]" value="">
+  <br>
+  <label for="url">URL (Optional) </label>
+  <input id="url" type="text" name="post[url]" value="">
+
+  <label for="content">Content (Optional)</label>
+  <input id="content" type="text" name="post[content]" value="">
+
+  <br>
+  <br>
+  <label>Choose Subsploots</label>
+
+  <input type="hidden" name="post[subreddit_ids][]">
+
+  <% Subreddit.all.each do |subreddit| %>
+    <br>
+    <label>
+      <input
+        type="checkbox"
+        value="<%= subreddit.id %>"
+        name="post[subreddit_ids][]"
+      /><%= subreddit.title %>
+    </label>
+  <% end %>
+  <br>
+  <input class="submit-button" type="submit" value="Make Post">
+</form>
+
+<%= link_to "Front Page", root_url, method: :get %>
+
+<% if current_user.id == @subreddit.moderator_id %>
+ <%= link_to "Subsploot Admin Panel", edit_subreddit_url(@subreddit), method: :get %>
+<% end %>
