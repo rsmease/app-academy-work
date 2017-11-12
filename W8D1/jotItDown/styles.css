@@ -1,0 +1,204 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/*
+Color Palette:
+notepad-gray: #FDF6E5;
+light-green: #50AE55;
+dark-green: #409041;
+dark-pencil: #D99144;
+light-pencil: #F9AF48;
+eraser: #FD8A6E;
+graphite-gray: #666666;
+*/
+
+/*splash page styles*/
+.header-logo {
+  height: 75px;
+  width: auto;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #FDF6E5;
+  padding: 20px;
+  width: 100%;
+  z-index: 2px;
+  -webkit-box-shadow: 0px 5px 23px 1px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 5px 23px 1px rgba(0,0,0,0.2);
+  box-shadow: 0px 5px 23px 1px rgba(0,0,0,0.2);
+}
+
+header a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #FFFFFF;
+
+  background: #666666;
+  border-bottom: 2px solid #222222;
+  border-right: 2px solid #222222;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+header a:hover {
+  background: #555555;
+}
+
+.session-actions {
+  margin-top: 24px;
+}
+
+.current-user-actions {
+  margin-top: 24px;
+}
+
+.splash {
+  width: 100%;
+}
+
+.search {
+  margin-top: 24px;
+}
+
+.searchbar {
+  height: 36px;
+  width: 300px;
+  border-radius: 5px;
+  font-family: 'Fugaz One', cursive;
+}
+
+.searchbar:focus {
+  border: none;
+  box-shadow: none;
+}
+
+.search-submit {
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Fugaz One', cursive;
+  color: #FFFFFF;
+
+  background: #D99144;
+  border-bottom: 2px solid #222222;
+  border-right: 2px solid #222222;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 64px;
+}
+
+.introduction {
+  width: 33%;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 150px;
+}
+
+.introduction h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.introduction h2 {
+  font-size: 36px;
+}
+
+.hero-image-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image-notepad {
+  height: 300px;
+  width: auto;
+}
+
+.note-container {
+  background-image: linear-gradient(45deg, #D99144, #F9AF48);
+  border-radius: 2px;
+  height: 300px;
+  width: 300px;
+}
+
+.note-container:hover {
+  background-image: linear-gradient(215deg, #D99144, #F9AF48);
+  border-radius: 2px;
+  height: 300px;
+  width: 300px;
+}
+
+.note {
+  color: #000000;
+  padding: 20px 50px;
+}
+
+.note h3 {
+  text-decoration: underline;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.note li {
+  list-style: none;
+}
+
+
+body {
+  font-family: 'Fugaz One', cursive;
+  background-image: linear-gradient(90deg, #F9AF48, #FD8A6E);
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #FDF6E5;
+  padding: 20px;
+  width: 100%;
+  -webkit-box-shadow: 0px 5px 23px 1px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 5px 23px 1px rgba(0,0,0,0.2);
+  box-shadow: 0px 5px 23px 1px rgba(0,0,0,0.2);
+}
+
+footer a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #666666;
+  padding: 10px 20px;
+  margin-left: 10px;
+}
